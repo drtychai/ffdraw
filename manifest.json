@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "version": "0.0.1",
+  "name": "ffdraw",
+    "description": "Draw over any web page!",
+  "permissions": [
+    "activeTab"
+  ],
+  "icons": {
+    "16" : "data/icons/pen.svg",
+    "32" : "data/icons/pen.svg",
+    "48" : "data/icons/pen.svg",
+    "64" : "data/icons/pen.svg",
+    "128": "data/icons/pen.svg",
+    "256": "data/icons/pen.svg",
+    "512": "data/icons/pen.svg"
+  },
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "homepage_url": "https://github.com/drtychai/ffdraw/",
+  "browser_action": {
+    "default_title": "ffDraw"
+  },
+  "web_accessible_resources": [
+    "data/window/index.html"
+  ],
+  "commands": {
+    "_execute_browser_action": {}
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "bynx@localhost",
+      "strict_min_version": "90.0"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+:root {
+    --stylus-paper-above: 100000;
+    --stylus-paper-context-menu: 100001;
+    --stylus-paper-below: -100000;
+}
+
+#stylusPaper_body {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+/* New content of the page is put in foreground */
+#stylusPaper_foreground {
+    box-sizing: border-box;
+    width: 100%;
+    flex: none;
+    margin-left: -100%;
+    /* Slight tiny to our drawing frame to indicate if in use */
+    background-color: rgba(0,0,0,0.1);
+    /* height: 100vh; */
+}
+
+/* Old content of the page is put in background */
+#stylusPaper_content {
+    box-sizing: border-box; /* required */
+    width: 100%; /* required */
+    flex: none; /* required */
+}
+
+.stylusPaper_above {
+    z-index: var(--stylus-paper-above);
+}
+.stylusPaper_below {
+    z-index: var(--stylus-paper-below);
+    filter: opacity(0.1);
+}
+
+.hide-draw-menu {
+    display: none;
+}
+
+.draw-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #404040; /* Menu window bgcolor */
+    box-shadow: 3px 3px 3px grey;
+    border-radius: 3px;
+    color: #000000; /* Menu caption label color */
+    text-align: left;
+    z-index: var(--stylus-paper-context-menu);
+    cursor: auto;
+}
